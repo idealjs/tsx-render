@@ -1,7 +1,7 @@
 {
-    "name": "reactive-html",
+    "name": "@idealjs/reactive-html",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "src/index.ts",
     "license": "MIT",
     "scripts": {
         "start": "webpack serve",
@@ -10,5 +10,8 @@
     "devDependencies": {
         "csstype": "^3.0.8"
     },
-    "dependencies": {}
+    "dependencies": {
+        "@idealjs/corn": "^0.0.1",
+        "@idealjs/corn-reactive": "^1.0.0"
+    }
 }
