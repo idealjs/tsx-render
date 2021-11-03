@@ -8,7 +8,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@idealjs/corn": "^0.0.1"
+        "@idealjs/reactive-html": "^1.0.0"
     },
     "devDependencies": {
         "html-webpack-plugin": "^5.3.1",

@@ -8,6 +8,7 @@ const Hello = (props: { name: string }) => {
     const [todos, setTodos] = createSignal<boolean[]>([]);
 
     const onClick = () => {
+        console.log("test test")
         setState((s) => !s);
         setTodos((todos) => [...todos, state()]);
     };
@@ -24,10 +25,15 @@ const Hello = (props: { name: string }) => {
         <div>
             <div>Hello {name}</div>
             <div>
-                <button onClick={onClick}>test button</button>
+                <div>
+                    {123}
+                    {321}
+                </div>
+                <button onClick={onClick}>
+                    {"test"} {"button"}
+                </button>
             </div>
             <div>state {state}</div>
-            <div>todos</div>
         </div>
     );
 };

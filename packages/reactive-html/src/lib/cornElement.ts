@@ -10,7 +10,15 @@ export const isCornText = (d: any): d is CornText => {
     );
 };
 
-class CornElement<Props extends { children?: any[] } = any> {
+interface IEvents {
+    onClick?: Function;
+}
+
+export interface Props extends IEvents {
+    children?: any[];
+}
+
+class CornElement {
     private type: string | ((props: Props) => CornElement);
     private props: Props;
     constructor(type: string | ((props: Props) => CornElement), props: Props) {
@@ -29,6 +37,7 @@ class CornElement<Props extends { children?: any[] } = any> {
             prevEl =
                 prevEl == null ? document.createElement(this.type) : prevEl;
 
+            //this.props.children may be not array,or CornElement or CornText or Other;
             const children = this.props.children
                 ? this.props.children
                       .flatMap(
@@ -73,6 +82,10 @@ class CornElement<Props extends { children?: any[] } = any> {
                 : null;
             let current = null;
             current = this.upsert(prevEl, children, current);
+
+            if (this.props.onClick && prevEl instanceof Element) {
+                Reflect.set(prevEl, "onclick", this.props.onClick);
+            }
 
             return prevEl;
         });
