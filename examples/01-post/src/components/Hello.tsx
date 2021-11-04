@@ -7,8 +7,19 @@ const Hello = (props: { name: string }) => {
 
     const [todos, setTodos] = createSignal<boolean[]>([]);
 
+    const todosDiv = createMemo(() => {
+        return todos().map((todo) => {
+            return (
+                <div>
+                    {todo}
+                    {todo}
+                </div>
+            );
+        });
+    });
+
     const onClick = () => {
-        console.log("test test")
+        console.log("test test");
         setState((s) => !s);
         setTodos((todos) => [...todos, state()]);
     };
@@ -32,6 +43,7 @@ const Hello = (props: { name: string }) => {
                 <button onClick={onClick}>
                     {"test"} {"button"}
                 </button>
+                {todosDiv}
             </div>
             <div>state {state}</div>
         </div>
