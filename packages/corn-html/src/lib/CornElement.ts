@@ -1,5 +1,5 @@
 import { CornComponent, createEffect, createRoot } from "@idealjs/corn";
-import { ReadFunction } from "@idealjs/corn-reactive";
+import { ReadFunction } from "@idealjs/reactive";
 
 export type Primitive = number | string | boolean | symbol | null | undefined;
 export type CornText = number | string | boolean;

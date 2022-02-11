@@ -1,4 +1,4 @@
-import { ReadFunction } from "@idealjs/corn-reactive";
+import { ReadFunction } from "@idealjs/reactive";
 
 export type CornText = string | number;
 

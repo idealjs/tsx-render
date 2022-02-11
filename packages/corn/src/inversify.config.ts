@@ -2,7 +2,7 @@ import "reflect-metadata";
 import { Container, decorate, injectable } from "inversify";
 import Corn from "./Corn";
 import TYPES from "./types";
-import Reactive from "@idealjs/corn-reactive";
+import Reactive from "@idealjs/reactive";
 
 var container = new Container();
 decorate(injectable(), Reactive);

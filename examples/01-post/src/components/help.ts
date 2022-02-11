@@ -1,5 +1,5 @@
 import { createEffect, createMemo } from "@idealjs/corn";
-import { ReadFunction } from "@idealjs/corn-reactive";
+import { ReadFunction } from "@idealjs/reactive";
 
 export const value = <T>(r: ReadFunction<T>, callback: (v: T) => any) => {
     return () => callback(r());

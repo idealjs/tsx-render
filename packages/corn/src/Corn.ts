@@ -1,5 +1,5 @@
 import { inject, injectable } from "inversify";
-import Reactive from "@idealjs/corn-reactive";
+import Reactive from "@idealjs/reactive";
 
 import TYPES, {
     CornChild,
