@@ -1,5 +1,5 @@
 import { createEffect, createMemo, createSignal } from "@idealjs/corn";
-import CornElement from "./lib/cornElement";
+import CornElement from "./lib/CornElement";
 import hyper from "./lib/hyper";
 
 const App = (): CornElement => {

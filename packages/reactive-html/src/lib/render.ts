@@ -1,4 +1,4 @@
-import CornElement from "./cornElement";
+import CornElement from "./CornElement";
 
 const render = (cornElement: CornElement, container: Element | null) => {
     const el = cornElement.create();

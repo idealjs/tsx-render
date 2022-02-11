@@ -1,4 +1,4 @@
-import CornElement, { Props } from "./cornElement";
+import CornElement, { Props } from "./CornElement";
 
 const hyper = <T extends Props>(
     type: string | ((props: Props) => CornElement),
