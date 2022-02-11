@@ -1,7 +1,4 @@
-import { inject, injectable } from "inversify";
-import Reactive from "@idealjs/reactive";
-
-import TYPES, {
+import {
     CornChild,
     CornElement,
     DOMAttributesOBJ,
@@ -10,7 +7,8 @@ import TYPES, {
     JSXFunction,
     Renderer,
 } from "./types";
-import { createEffect, createRoot } from "..";
+
+import { createEffect } from "..";
 
 const isString = (type: string | CornComponent | CornChild): type is string => {
     return typeof type == "string";
@@ -92,11 +90,7 @@ const appedCornChild = (target: Element, child: CornChild) => {
     }
 };
 
-@injectable()
 class Corn implements ICorn {
-    @inject(TYPES.Reactive)
-    public reactive!: Reactive;
-
     constructor() {}
 
     public render = (element: CornElement, container: Element) => {
