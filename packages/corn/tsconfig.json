@@ -3,7 +3,7 @@
         "outDir": "./dist",
         "declaration": true,
         "lib": ["es6", "es2017", "dom"],
-        "types": ["reflect-metadata", "jest"],
+        "types": ["jest"],
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "target": "es6",
