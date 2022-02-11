@@ -1,5 +1,5 @@
 {
-    "name": "@idealjs/reactive-html",
+    "name": "@idealjs/corn-html",
     "version": "1.0.0",
     "main": "src/index.ts",
     "license": "MIT",
@@ -12,6 +12,6 @@
     },
     "dependencies": {
         "@idealjs/corn": "^0.0.1",
-        "@idealjs/corn-reactive": "^1.0.0"
+        "@idealjs/reactive": "^1.0.0"
     }
 }
